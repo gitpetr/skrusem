@@ -1,0 +1,28 @@
+<h3>Услуги строительной компании:</h3>
+<p id="notice"><%= notice %></p>
+
+<h1></h1>
+
+ 
+
+  <div>
+    <% @adminkas.each do |adminka| %>
+      
+        <p><strong><%= adminka.title %></strong></p>
+      <div>
+         
+      <% adminka.attachments.each do |a| %>
+        <p class="pics">
+        <%#= link_to a.file.file.filename, a.file.url %>
+
+        <img  src="<%= a.file.url %>"><img>
+        </p>
+        <% end %>
+        
+        <p class="adminka_body"><%= adminka.body %><hr /></p>
+         </div>
+    <% end %>
+   
+</div>
+
+<br>

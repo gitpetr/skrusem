@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Название</strong>
+  <%= @adminka.title %>
+</p>
+<p>  
+      <% @adminka.attachments.each do |a| %>
+        
+        <%#= link_to a.file.file.filename, a.file.url %>
+
+        <img src="<%= a.file.url %>"><img>
+         
+        <% end %>
+        
+  </p>
+<p>
+  <strong>Описание</strong>
+  <%= @adminka.body %>
+</p>
+
+<%= link_to 'Изменить', edit_adminka_path(@adminka) %> |
+<%= link_to 'Назад', adminkas_path %>

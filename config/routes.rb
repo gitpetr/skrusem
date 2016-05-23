@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount Ckeditor::Engine => '/ckeditor'
   match '/services', to: 'services#index', via: 'get'
 
   devise_for :users

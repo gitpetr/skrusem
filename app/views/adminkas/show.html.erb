@@ -16,7 +16,7 @@
   </p>
 <p>
   <strong>Описание</strong>
-  <%= @adminka.body %>
+  <%= @adminka.body.html_safe %>
 </p>
 
 <%= link_to 'Изменить', edit_adminka_path(@adminka) %> |
